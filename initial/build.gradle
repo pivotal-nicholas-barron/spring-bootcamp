@@ -17,6 +17,11 @@ jar {
     version =  '0.1.0'
 }
 
+jar {
+    baseName = 'gs-accessing-data-mysql'
+    version =  '0.1.0'
+}
+
 repositories {
     mavenCentral()
 }
@@ -27,6 +32,8 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile 'mysql:mysql-connector-java'
 }
 
 task wrapper(type: Wrapper) {
